@@ -7,14 +7,8 @@ These code examples accompany the lecture materials. They are primarily written 
 - [SciPy](https://scipy.org) for scientific routines and algorithms
 - [Matplotlib](https://matplotlib.org) for graphing and visualization
 
-In addition, a number of programs output data to text in a format that can be
-read by the freeware plotting program [Gnuplot](http://gnuplot.info).
-
-Enrolled students can access the [course Canvas
-website](https://canvas.wisc.edu/courses/488961) for more information.
-
 ## Units
-- Unit 0: Fundamentals
+- [Unit 0: Fundamentals](https://github.com/rycroft-group/math513/tree/main/0_fundamentals)
 - Unit 1: Singular value decomposition
 - Unit 2: QR decomposition and least squares
 - Unit 3: Conditioning and stability
