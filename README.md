@@ -1,5 +1,5 @@
 # UW–Madison Math/CS 513: Code examples
-Math/CS 513 is an undergraduate course taught at the University of Wisconsin, Madison on methods of computational mathematics. [Visit the course website.](https://web.math.wisc.edu/math513/)
+Math/CS 513 is an undergraduate course taught at the University of Wisconsin, Madison on numerical linear algebra. [Visit the course website.](https://web.math.wisc.edu/math513/)
 
 These code examples accompany the lecture materials. They are primarily written in Python and make use of several well-established libraries:
 
