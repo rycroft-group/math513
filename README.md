@@ -42,3 +42,4 @@ These code examples accompany the lecture materials. They are primarily written 
 - [Git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf) (You will mostly only be using `git pull` to retrieve updated files)
 - [Install Jupyter using Anaconda and conda](https://docs.jupyter.org/en/latest/install/notebook-classic.html#installing-jupyter-using-anaconda-and-conda) (The straightforward way, but your libraries are installed in `conda` environment; may encounter path/dependency issues in future)
 - [Install Jupyter with pip](https://docs.jupyter.org/en/latest/install/notebook-classic.html#alternative-for-experienced-python-users-installing-jupyter-with-pip) (If you already have Python3 installed and do not want to deal with additional `conda` enviroment, which gives a cleaner setup for future Python3 usage)
+- [Python tutorial](https://github.com/rycroft-group/math513/tree/main/python_tutorial)
