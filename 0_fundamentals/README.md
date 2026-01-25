@@ -31,7 +31,23 @@ The program `norm_unit_circle_image.py` plots four different norms of the unit c
 python3 norm_unit_circle_image.py
 ```
 
-## Lecture 5: Matrix visualization
+## Lecture 5: Floating point arithmetic and matrix visualization
+
+### The `float.py` example
+
+The program `float.py` demonstrates how floating point arithmetic works in Python. The program can be run by typing the following command in the terminal:
+
+```Shell
+python3 float.py
+```
+
+### The `float_precision.py` example
+
+The program `float_precision.py` demonstrates benign loss of precision and significant loss of precision due to cancellation. The program can be run by typing the following command in the terminal:
+
+```Shell
+python3 float_precision.py
+```
 
 ### The `vizmat.py` example
 
