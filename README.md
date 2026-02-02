@@ -9,7 +9,7 @@ These code examples accompany the lecture materials. They are primarily written 
 
 ## Units
 - [Unit 0: Fundamentals](https://github.com/rycroft-group/math513/tree/main/0_fundamentals)
-- Unit 1: Singular value decomposition
+- [Unit 1: Singular value decomposition](https://github.com/rycroft-group/math513/tree/main/1_svd)
 - Unit 2: QR decomposition and least squares
 - Unit 3: Conditioning and stability
 - Unit 4: Linear systems
