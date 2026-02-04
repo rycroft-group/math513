@@ -12,3 +12,11 @@ The Python notebook contains the example on compressing and reconstructing a sin
 ### The `image_denoising.ipynb` notebook
 
 The Python notebook contains the example of using the SVD to denoise a set of similar stamp images.
+
+## Lecture 10: Principal component analysis (PCA)
+
+This example was created Chris Rycroft.
+
+### The `eigenleaf.ipynb` notebook
+
+The Python notebook contains the example of using the SVD/PCA for New Hampshire leaf identification.
