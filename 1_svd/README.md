@@ -20,3 +20,9 @@ This example was created Chris Rycroft.
 ### The `eigenleaf.ipynb` notebook
 
 The Python notebook contains the example of using the SVD/PCA for New Hampshire leaf identification.
+
+## Lecture 11: SVD/PCA extensions, applications
+
+### The `movie_recommendation.ipynb` notebook
+
+The Python notebook contains the example of using the SVD/PCA for movie rating predictions and recommendations.
