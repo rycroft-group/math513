@@ -5,7 +5,7 @@ This directory contains several examples used in Unit 2 on QR factorization and 
 
 The Python notebook contains the same code and functionality in the Python scripts below. It combines the scripts into an interactive format, making it easier to run, visualize results, and make modifications directly within the notebook environment.
 
-## Lecture 14: Gram--Schmidt orthogonalization
+## Lecture 14: Gram–Schmidt orthogonalization
 
 ### The `gram_schmidt.py` example
 
