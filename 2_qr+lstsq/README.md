@@ -12,8 +12,25 @@ The Python notebook contains the same code and functionality in the Python scrip
 The program `gram_schmidt.py` demonstrates the classical and modified Gram–Schmidt algorithms. The program can be run by typing the following command in the terminal:
 
 ```Shell
-python3 gram_schmidt
+python3 gram_schmidt.py
 ```
 
 ## Lecture 16: Least squares problems
 
+### The `lfit.py` example
+
+The program `lfit.py` demonstrates how to use the normal equations and library functions to solve for an overdetermined linear least squares problem. The program can be run by typing the following command in the terminal:
+
+```Shell
+python3 lfit.py
+```
+
+## (Extra) Lecture 17: Underdetermined least squares
+
+### The `under_lfit.py` example
+
+The program `under_lfit.py` demonstrates how to use the normal equations, regularization, and library functions to solve for an underdetermined linear least squares problem. The program can be run by typing the following command in the terminal:
+
+```Shell
+python3 under_lfit.py
+```
