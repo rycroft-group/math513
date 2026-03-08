@@ -12,7 +12,7 @@ These code examples accompany the lecture materials. They are primarily written 
 - [Unit 1: Singular value decomposition](https://github.com/rycroft-group/math513/tree/main/1_svd)
 - [Unit 2: QR decomposition and least squares](https://github.com/rycroft-group/math513/tree/main/2_qr%2Blstsq)
 - [Unit 3: Conditioning and stability](https://github.com/rycroft-group/math513/tree/main/3_cond%2Bstab)
-- Unit 4: Linear systems
+- [Unit 4: Linear systems](https://github.com/rycroft-group/math513/tree/main/4_linsys)
 - Unit 5: Eigenvalue problems
 - Unit 6: Iterative methods
 
