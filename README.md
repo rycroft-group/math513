@@ -14,7 +14,7 @@ These code examples accompany the lecture materials. They are primarily written 
 - [Unit 3: Conditioning and stability](https://github.com/rycroft-group/math513/tree/main/3_cond%2Bstab)
 - [Unit 4: Linear systems](https://github.com/rycroft-group/math513/tree/main/4_linsys)
 - [Unit 5: Eigenvalue problems](https://github.com/rycroft-group/math513/tree/main/5_eigen)
-- Unit 6: Iterative methods
+- [Unit 6: Iterative methods](https://github.com/rycroft-group/math513/tree/main/6_iter)
 
 ## Run code
 
