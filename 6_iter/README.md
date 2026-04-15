@@ -14,3 +14,13 @@ This program demonstrates how to use Arnoldi iterations to approximate eigenvalu
 ```Shell
 python3 arnoldi.py
 ```
+
+## Lecture 35: Lanczos iteration
+
+### The `lanczos.py` example
+
+This program demonstrates the Lanczos algorithm (an example of a Krylov subspace method) for estimating a subset of eigenvalues. The program can be run by typing the following command in the terminal:
+
+```Shell
+python3 lanczos.py
+```
