@@ -25,7 +25,7 @@ This program demonstrates the Lanczos algorithm (an example of a Krylov subspace
 python3 lanczos.py
 ```
 
-## Lecture 36: Lanczos iteration
+## Lecture 36: GMRES
 
 ### The `gmres.py` example
 
