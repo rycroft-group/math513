@@ -24,3 +24,13 @@ This program demonstrates the Lanczos algorithm (an example of a Krylov subspace
 ```Shell
 python3 lanczos.py
 ```
+
+## Lecture 36: Lanczos iteration
+
+### The `gmres.py` example
+
+This program demonstrates the GMRES algorithm for solving linear systems. The program can be run by typing the following command in the terminal:
+
+```Shell
+python3 gmres.py
+```
