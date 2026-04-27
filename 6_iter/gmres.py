@@ -3,6 +3,51 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 
+def arnoldi(A, b, n):
+    # Initialize quantity
+    m = A.shape[0]
+    Q = np.zeros((m, n + 1))        # Q_n and Q_{n+1}
+    Ht_n = np.zeros((n + 1, n))     # \tilde{H}_n
+    Q[:, 0] = b / np.linalg.norm(b) # q_0 = b / ||b||
+    
+    # Arnoldi iteration loop
+    for j in range(n):
+        v = A @ Q[:, j]                     # v = A q_j
+        for i in range(j + 1):
+            Ht_n[i, j] = np.dot(Q[:, i], v) # h_ij = q_i^* v
+            v = v - Ht_n[i, j] * Q[:, i]    # v = v - h_ij q_i
+        Ht_n[j + 1, j] = np.linalg.norm(v)  # h_{j+1,j} = ||v||
+        Q[:, j + 1] = v / Ht_n[j + 1, j]    # q_{j+1} = v / h_{j+1,j}
+
+    return Q, Ht_n
+
+def gmres(A, b, n_max):
+    # Store the solution and residuals
+    gmres_residuals = []
+    x_n = np.zeros(A.shape[0])
+    beta = np.linalg.norm(b)
+
+    # gmres iteration loop
+    for n in range(1, n_max + 1):
+        # 1. Step n of Arnoldi iteration
+        Q, Ht_n = arnoldi(A, b, n)
+
+        # 2. Find y for min || \tilde{H}_n y - ||b|| e1 ||
+        e1 = np.zeros(n + 1) # e_1 = [1, 0, ..., 0]^T
+        e1[0] = beta         # ||b|| e_1
+        y, *_ = np.linalg.lstsq(Ht_n, e1, rcond=None)
+
+        # 3. Least squares solution x_n = Q_n y
+        x_n = Q[:, :n] @ y
+        residual = np.linalg.norm(b - A @ x_n) / beta
+        gmres_residuals.append(residual)
+
+        # 4. Check for convergence
+        if residual < 1e-16:
+            break
+
+    return x_n, gmres_residuals
+
 # Construct matrix A
 m = 200
 np.random.seed(42)
@@ -12,37 +57,8 @@ n_max = 10
 # Right-hand side
 b = np.ones(m)
 
-# Initialize quantity for GMRES
-Q = np.zeros((m, n_max + 1))        # Q_n and Q_{n+1}
-Ht_n = np.zeros((n_max + 1, n_max)) # \tilde{H}_n
-Q[:, 0] = b / np.linalg.norm(b)     # q_0 = b / ||b||
-# Store the solution and residuals
-x_n = np.zeros(m)
-gmres_residuals = []
-
-# GMRES iteration loop
-for n in range(n_max):
-    # 1. Step n of Arnoldi iteration
-    v = A @ Q[:, n]                     # v = A q_n
-    for j in range(n+1):
-        Ht_n[j, n] = np.dot(Q[:, j], v) # h_jn = q_j^* v
-        v = v - Ht_n[j, n] * Q[:, j]    # v = v - h_jn q_j
-    Ht_n[n + 1, n] = np.linalg.norm(v)  # h_{n+1,n} = ||v||
-    Q[:, n + 1] = v / Ht_n[n + 1, n]    # q_{n+1} = v / h_{n+1,n}
-
-    # 2. Find y for min || \tilde{H}_n y - ||b|| e1 ||
-    rhs = np.zeros(n + 2)      # e_1 = [1, 0, ..., 0]^T
-    rhs[0] = np.linalg.norm(b) # ||b|| e_1
-    y, *_ = np.linalg.lstsq(Ht_n[:n + 2, :n + 1], rhs, rcond=None)
-
-    # 3. GMRES iterate
-    x_n = Q[:, :n + 1] @ y
-    residual = np.linalg.norm(b - A @ x_n) / np.linalg.norm(b)
-    gmres_residuals.append(residual)
-
-    # 4. Check for convergence
-    if residual < 1e-16:
-        break
+# GMRES
+x_n, gmres_residuals = gmres(A, b, n_max)
 
 # Visualize
 fig = plt.figure(figsize=(4, 2), dpi=300)
