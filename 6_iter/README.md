@@ -34,3 +34,21 @@ This program demonstrates the GMRES algorithm for solving linear systems. The pr
 ```Shell
 python3 gmres.py
 ```
+
+## Lecture 38: Conjugate gradient
+
+### The `s_descent.py` example
+
+This program demonstrates the steepest descent algorithm for solving linear systems. The program can be run by typing the following command in the terminal:
+
+```Shell
+python3 s_descent.py
+```
+
+### The `cg.py` example
+
+This program demonstrates the conjugate gradient algorithm for solving linear systems. The program can be run by typing the following command in the terminal:
+
+```Shell
+python3 cg.py
+```
